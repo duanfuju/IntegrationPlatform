@@ -1,0 +1,147 @@
+*{
+   margin:0 auto; 
+   padding:0 auto; 
+   font-size:15px;
+}
+a{
+	font-size:9pt;
+	text-decoration: none;
+	color:black;
+}
+.box {
+    position:absolute; 
+	width:100%; 
+	height:100%; 
+	z-index:-1	
+}
+.username{
+    position: absolute;
+    top:74.65%;
+    left: 74.46%;
+    font-size: 20px;
+    font-weight: bold;
+    color:#007E9F;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+}
+.blk_18{
+	position: absolute;			
+	top:16.97%;
+    left: 12.15%;
+}
+ul{
+	list-style: none;
+}
+/* li{
+	background-color: white;
+}
+li:nth-last-child(odd){
+	background-color: #EEEEEE;
+} */
+
+.news_left{
+	width: 340px;
+	height:100px;
+	position: absolute;
+	top:73.87%;
+	left: 15.26%;
+}
+.news_right{		
+	width: 300px;
+	height:100px;
+	position: absolute;
+	top:73.87%;
+	left:48%;
+}
+.news_left_element,.news_right_element{
+	width: 70%;
+	height: 30px;
+	font-size: 12px;
+	line-height: 30px;
+	padding-left: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.icon{
+	cursor:pointer;
+}
+.ui-widget-content{
+	background-color: white;
+}
+div#dialog_editPwd.ui-widget-content.ui-widget-content{
+	background-color: #EEEEEE;
+}
+
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+   background: #00ABF6 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 
+}
+
+
+
+
+
+.clear{clear:both; height:0px; overflow:hidden; z-index:1;}
+ul,a{ list-style-type:none; text-decoration:none;}
+img,img a{border:0px;vertical-align:middle;}
+
+#tanchu{width:720px; height:405px; padding:10px; padding-top:45px;margin:auto;background:url(../images/tanchu_bg.png) no-repeat; position:relative;}
+#tanchu .end{width:20px; height:20px; position:absolute; right:20px; top:12px; cursor:pointer;}
+#tanchu .ico_list{height:400px; overflow:auto; position: relative;}
+#tanchu .ico_list li{ height:84px;color:#079bd2; font-size:16px; font-weight:bold;padding-left:10px;padding-top:10px;padding-bottom:10px;border-bottom:1px dashed #999; position:relative;}
+#tanchu .ico_list li img { margin-right:5px;}
+#tanchu .ico_list li .right01{ width:90px;position:absolute; right:10px; top:40px;text-align:right;}
+#tanchu .ico_list li .left{ cursor: pointer;width:600px;position:absolute;padding-left:10px; left:90px; top:70px; color:#999; font-size:12px; font-weight:200; overflow:hidden;}
+
+
+.t_btn01{width:90px; height:33px;background: url(../images/tanchu_btn01.png) no-repeat;border:0; cursor:pointer;}
+.t_btn02{width:90px; height:33px;background: url(../images/tanchu_btn02.png) no-repeat;border:0; cursor:pointer; }
+
+
+*,#tanchu{  
+	  scrollbar-face-color:#01b9f6; /*面子*/  
+	  scrollbar-arrow-color:#fff; /*箭头*/  
+	  scrollbar-3dlight-color:#e9f1d2; /*最外左*/  
+	  scrollbar-highlight-color:#e9f1d2; /*左二*/  
+	  scrollbar-shadow-color:#e9f1d2; /*右二*/  
+	  scrollbar-darkshadow-color:#e9f1d2; /*右一*/  
+	  scrollbar-track-color:#e9f1d2; /*滑道*/  
+}
+
+
+/*滚动条整体*/  
+::-webkit-scrollbar{  
+    width:12px; /*滚动条宽度*/  
+}  
+/*滚动条按钮*/  
+::-webkit-scrollbar-button {  
+
+}  
+::-webkit-scrollbar-track{  
+    background-color: #e9f1d2;  /*滑道全部*/  
+}  
+::-webkit-scrollbar-track-piece{  
+    background-color:#c7dce3;  /*滑道*/  
+    -webkit-border-radius:1px; /*滑道圆角宽度*/  
+}  
+::-webkit-scrollbar-thumb{  
+   background:#01b9f6; /*滑动条表面*/  
+    /*滑动条边框*/  
+    border-radius:8px;/*滑动条圆角宽度*/ 
+}  
+/*横竖滚动条交角*/  
+::-webkit-scrollbar-corner {  
+    background-color: #0380f5;  
+}  
+/*横竖滚动条交角图案*/  
+::-webkit-resizer {  
+    /*background-image: url(/public/img/resizer-inactive.png);*/  
+    background-repeat: no-repeat;  
+    background-position: bottom right;  
+}  
+/*鼠标滑过滑动条*/  
+::-webkit-scrollbar-thumb:hover{  
+    background:#009dd2; 
+} 

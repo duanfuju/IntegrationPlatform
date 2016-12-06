@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model>
+  <DataType name="dtPtUserCfg">
+    <Property name="matchType">cn.com.oking.pt.entity.PtUserCfg</Property>
+    <PropertyDef name="id">
+      <Property></Property>
+    </PropertyDef>
+    <PropertyDef name="userName">
+      <Property></Property>
+      <Property name="label">用户名</Property>
+    </PropertyDef>
+    <PropertyDef name="type">
+      <Property></Property>
+      <Property name="label">类型</Property>
+    </PropertyDef>
+    <PropertyDef name="serialNumber">
+      <Property name="dataType">BigDecimal</Property>
+      <Property name="label">序号</Property>
+    </PropertyDef>
+    <PropertyDef name="ptSysLinkId">
+      <Property></Property>
+      <Property name="label">系统平台的地址的外键</Property>
+    </PropertyDef>
+  </DataType>
+  <DataType name="dtPtSysLink">
+    <Property name="matchType">cn.com.oking.pt.entity.PtSysLink</Property>
+    <PropertyDef name="id">
+      <Property></Property>
+    </PropertyDef>
+    <PropertyDef name="sysSimpleName">
+      <Property></Property>
+      <Property name="label">系统简称</Property>
+    </PropertyDef>
+    <PropertyDef name="sysName">
+      <Property></Property>
+      <Property name="label">系统名称</Property>
+    </PropertyDef>
+    <PropertyDef name="sysAddress">
+      <Property></Property>
+      <Property name="label">系统地址</Property>
+    </PropertyDef>
+    <PropertyDef name="imgUrl">
+      <Property></Property>
+      <Property name="label">图片路径</Property>
+    </PropertyDef>
+    <PropertyDef name="userName">
+      <Property></Property>
+      <Property name="label">用户名</Property>
+    </PropertyDef>
+    <PropertyDef name="userPwd">
+      <Property></Property>
+      <Property name="label">密码</Property>
+    </PropertyDef>
+    <PropertyDef name="param1">
+      <Property></Property>
+    </PropertyDef>
+    <PropertyDef name="param2">
+      <Property></Property>
+    </PropertyDef>
+    <PropertyDef name="isSignIn">
+      <Property/>
+      <Property name="label">是否登录(y/n)</Property>
+    </PropertyDef>
+    <PropertyDef name="iconUrl">
+      <Property/>
+      <Property name="label">小图标</Property>
+    </PropertyDef>
+  </DataType>
+  <DataType name="dtPtRoleUrl">
+    <Property name="matchType">cn.com.oking.pt.entity.PtRoleUrl</Property>
+    <PropertyDef name="id">
+      <Property></Property>
+    </PropertyDef>
+    <PropertyDef name="roleName">
+      <Property></Property>
+      <Property name="label">角色名称</Property>
+    </PropertyDef>
+    <PropertyDef name="ptSysLinkId">
+      <Property></Property>
+      <Property name="label">系统平台地址的外键</Property>
+    </PropertyDef>
+  </DataType>
+  <DataType name="dtPtUserLoginCfg">
+    <Property name="matchType">cn.com.oking.pt.entity.PtUserLoginCfg</Property>
+    <PropertyDef name="id">
+      <Property></Property>
+    </PropertyDef>
+    <PropertyDef name="roleName">
+      <Property></Property>
+      <Property name="label">用户名称</Property>
+      <Property name="required">true</Property>
+    </PropertyDef>
+    <PropertyDef name="systemId">
+      <Property></Property>
+      <Property name="label">系统编号</Property>
+      <Property name="required">true</Property>
+    </PropertyDef>
+    <PropertyDef name="sysSimpleName">
+      <Property></Property>
+      <Property name="label">系统简称</Property>
+      <Property name="required">true</Property>
+    </PropertyDef>
+    <PropertyDef name="sysName">
+      <Property></Property>
+      <Property name="label">系统全称</Property>
+      <Property name="required">true</Property>
+    </PropertyDef>
+    <PropertyDef name="sysUrl">
+      <Property></Property>
+      <Property name="label">系统地址</Property>
+      <Property name="required">true</Property>
+    </PropertyDef>
+    <PropertyDef name="userName">
+      <Property></Property>
+      <Property name="label">系统用户登录名称</Property>
+      <Property name="required">true</Property>
+    </PropertyDef>
+    <PropertyDef name="password">
+      <Property></Property>
+      <Property name="label">系统用户登录密码</Property>
+      <Property name="required">true</Property>
+    </PropertyDef>
+    <PropertyDef name="parameter">
+      <Property></Property>
+      <Property name="label">参数</Property>
+    </PropertyDef>
+  </DataType>
+</Model>

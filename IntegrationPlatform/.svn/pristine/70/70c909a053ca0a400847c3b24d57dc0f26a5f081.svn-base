@@ -1,0 +1,27 @@
+core.runMode=debug
+
+model.root=classpath*:models
+view.root=classpath:
+
+view.javaScript.charset=UTF-8
+view.styleSheet.charset=UTF-8
+
+# close yanZhenMa
+bdf2.useCaptchaForLogin=false
+
+# close one user one login
+bdf2.securityMaximumSessions=-1
+
+
+bdf2.formLoginUrl=/Login.jsp
+bdf2.loginFailureTargetUrl=/Login.jsp
+bdf2.loginSuccessDefaultTargetUrl=/index/index.jsp
+
+
+
+
+
+
+
+
+

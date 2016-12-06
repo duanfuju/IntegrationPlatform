@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewConfig>
+  <Arguments/>
+  <Context/>
+  <Model/>
+  <View>
+    <DataSet id="dsCfgSingle">
+      <Property name="dataType">dtPtUserLoginCfg</Property>
+    </DataSet>
+    <DataSet id="dsCfg">
+      <Property name="dataProvider">ptUserLoginCfgAction#getPtUserLoginCfg</Property>
+      <Property name="dataType">[dtPtUserLoginCfg]</Property>
+      <Property name="pageSize">12</Property>
+      <Property name="loadMode">lazy</Property>
+    </DataSet>
+    <ToolBar>
+      <Button>
+        <Property name="action">saveCfgAction</Property>
+        <Property name="caption">保存</Property>
+        <Property name="icon">url(>skin>common/icons.gif) -140px -20px</Property>
+      </Button>
+      <ToolBarButton id="btnAdd">
+        <Property name="caption">新增</Property>
+        <Property name="icon">url(>skin>common/icons.gif) -120px -0px</Property>
+      </ToolBarButton>
+      <ToolBarButton id="btnupdate">
+        <Property name="caption">修改</Property>
+        <Property name="icon">url(>skin>common/icons.gif) -200px -0px</Property>
+      </ToolBarButton>
+      <DataPilot>
+        <Property name="dataSet">dsCfg</Property>
+        <Property name="itemCodes">-,x,pages</Property>
+      </DataPilot>
+    </ToolBar>
+    <DataGrid id="dgCfg">
+      <Property name="dataSet">dsCfg</Property>
+      <DataColumn name="roleName">
+        <Property name="property">roleName</Property>
+      </DataColumn>
+      <DataColumn name="sysSimpleName">
+        <Property name="property">sysSimpleName</Property>
+      </DataColumn>
+      <DataColumn name="sysName">
+        <Property name="property">sysName</Property>
+      </DataColumn>
+      <DataColumn name="sysUrl">
+        <Property name="property">sysUrl</Property>
+      </DataColumn>
+    </DataGrid>
+    <UpdateAction id="saveCfgAction">
+      <Property name="confirmMessage">是否保存</Property>
+      <Property name="successMessage">保存成功</Property>
+      <Property name="dataResolver">ptUserLoginCfgAction#save</Property>
+      <UpdateItem>
+        <Property name="dataSet">dsCfg</Property>
+      </UpdateItem>
+    </UpdateAction>
+    <UpdateAction id="saveCfgSingleAction">
+      <Property name="confirmMessage">是否保存</Property>
+      <Property name="successMessage">保存成功</Property>
+      <Property name="dataResolver">ptUserLoginCfgAction#save</Property>
+      <UpdateItem>
+        <Property name="dataSet">dsCfgSingle</Property>
+      </UpdateItem>
+    </UpdateAction>
+    <Dialog id="dialogSysLink">
+      <Property name="width">800</Property>
+      <Property name="height">500</Property>
+      <Property name="caption">系统平台地址</Property>
+      <Buttons>
+        <Button id="btnSubmit">
+          <Property name="caption">确认</Property>
+          <Property name="icon">url(>skin>common/icons.gif) -20px 0px</Property>
+        </Button>
+        <Button id="btnCancel">
+          <Property name="caption">取消</Property>
+          <Property name="icon">url(>skin>common/icons.gif) -40px 0px</Property>
+        </Button>
+      </Buttons>
+      <Children>
+        <Container>
+          <DataSet id="dsSysLink">
+            <Property name="dataProvider">ptUserLoginCfgAction#getPtSysLink</Property>
+            <Property name="dataType">[dtPtSysLink]</Property>
+            <Property name="pageSize">12</Property>
+          </DataSet>
+          <DataPilot>
+            <Property name="dataSet">dsSysLink</Property>
+            <Property name="itemCodes">pages</Property>
+          </DataPilot>
+          <DataGrid id="dgSysLink">
+            <Property name="dataSet">dsSysLink</Property>
+            <DataColumn name="sysSimpleName">
+              <Property name="property">sysSimpleName</Property>
+            </DataColumn>
+            <DataColumn name="sysName">
+              <Property name="property">sysName</Property>
+            </DataColumn>
+            <DataColumn name="sysAddress">
+              <Property name="property">sysAddress</Property>
+            </DataColumn>
+          </DataGrid>
+        </Container>
+      </Children>
+      <Tools/>
+    </Dialog>
+    <Dialog id="dialogupdate">
+      <Property name="width">800</Property>
+      <Property name="height">500</Property>
+      <Property name="caption">详细信息</Property>
+      <Buttons>
+        <Button id="btnSave">
+          <Property name="action">saveCfgAction</Property>
+          <Property name="caption">保存</Property>
+          <Property name="icon">url(>skin>common/icons.gif) -20px 0px</Property>
+        </Button>
+        <Button id="btnCancelUpdate">
+          <Property name="caption">取消</Property>
+          <Property name="icon">url(>skin>common/icons.gif) -40px 0px</Property>
+        </Button>
+      </Buttons>
+      <Children>
+        <AutoForm>
+          <Property name="dataSet">dsCfg</Property>
+          <AutoFormElement>
+            <Property name="name">id</Property>
+            <Property name="property">id</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">roleName</Property>
+            <Property name="property">roleName</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">systemId</Property>
+            <Property name="property">systemId</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">sysSimpleName</Property>
+            <Property name="property">sysSimpleName</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">sysName</Property>
+            <Property name="property">sysName</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">sysUrl</Property>
+            <Property name="property">sysUrl</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">userName</Property>
+            <Property name="property">userName</Property>
+            <Property name="label">登录名称</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">password</Property>
+            <Property name="property">password</Property>
+            <Property name="label">登录密码</Property>
+            <Editor>
+              <PasswordEditor/>
+            </Editor>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">parameter</Property>
+            <Property name="property">parameter</Property>
+            <Editor/>
+          </AutoFormElement>
+        </AutoForm>
+      </Children>
+      <Tools/>
+    </Dialog>
+    <Dialog id="dialogAdd">
+      <Property name="width">800</Property>
+      <Property name="height">500</Property>
+      <Property name="caption">详细信息</Property>
+      <Buttons>
+        <Button id="btnSaveSingle">
+          <Property name="action">saveCfgSingleAction</Property>
+          <Property name="caption">保存</Property>
+          <Property name="icon">url(>skin>common/icons.gif) -20px 0px</Property>
+        </Button>
+        <Button id="btnCancelAdd">
+          <Property name="caption">取消</Property>
+          <Property name="icon">url(>skin>common/icons.gif) -40px 0px</Property>
+        </Button>
+      </Buttons>
+      <Children>
+        <AutoForm>
+          <Property name="dataSet">dsCfgSingle</Property>
+          <AutoFormElement>
+            <Property name="name">id</Property>
+            <Property name="property">id</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">roleName</Property>
+            <Property name="property">roleName</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">systemId</Property>
+            <Property name="property">systemId</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">sysSimpleName</Property>
+            <Property name="property">sysSimpleName</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">sysName</Property>
+            <Property name="property">sysName</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">sysUrl</Property>
+            <Property name="property">sysUrl</Property>
+            <Property name="readOnly">true</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">userName</Property>
+            <Property name="property">userName</Property>
+            <Property name="label">登录名称</Property>
+            <Editor/>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">password</Property>
+            <Property name="property">password</Property>
+            <Property name="label">登录密码</Property>
+            <Editor>
+              <PasswordEditor/>
+            </Editor>
+          </AutoFormElement>
+          <AutoFormElement>
+            <Property name="name">parameter</Property>
+            <Property name="property">parameter</Property>
+            <Editor/>
+          </AutoFormElement>
+        </AutoForm>
+      </Children>
+      <Tools/>
+    </Dialog>
+  </View>
+</ViewConfig>
